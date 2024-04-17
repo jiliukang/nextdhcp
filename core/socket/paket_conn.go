@@ -113,7 +113,7 @@ func (p *DHCPConn) ReadFrom(b []byte) (int, net.Addr, error) {
 				}
 
 				// copy over the payload
-				copy(payload, b)
+				copy(b, payload)
 
 				return len(payload), addr, err
 			}
